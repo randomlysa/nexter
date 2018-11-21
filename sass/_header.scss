@@ -1,0 +1,6 @@
+@import "base";
+
+.header {
+  background-color: tan;
+  grid-column: full-start / col-end 6;
+}
