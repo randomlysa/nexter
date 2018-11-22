@@ -3,4 +3,49 @@
 .footer {
   background-color: $color-secondary;
   grid-column: full-start / full-end;
+  padding: 8rem;
+}
+
+.nav {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link:link,
+  &__link:visited {
+    background-color: lighten($color-secondary, 15%);
+    color: #fff;
+    font-family: $font-display;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: all .2s;
+  }
+
+  &__link:hover {
+    background-color: lighten($color-secondary, 25%);
+    transform: translateY(-3px);
+  }
+
+  &__link:active {
+    transform: translateY(-1px);
+  }
+}
+
+.copyright {
+  margin-top: 3rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: $font-display;
 }
