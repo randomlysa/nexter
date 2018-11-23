@@ -92,9 +92,13 @@ html {
   text-transform: uppercase;
   padding: 1.8rem 3rem;
   cursor: pointer;
-  transition: all .2s; }
+  transition: all .2s;
+  text-decoration: none; }
   .btn:hover {
-    background-color: #B28451; }
+    background-color: #B28451;
+    transform: translateY(-3px); }
+  .btn:active {
+    transform: translateY(-1px); }
 
 .mb-sm {
   margin-bottom: 2rem; }
