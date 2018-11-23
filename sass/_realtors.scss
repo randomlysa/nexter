@@ -3,4 +3,43 @@
 .realtors {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / -1;
+    padding: 4rem;
+  }
+
+  font-family: $font-primary;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 2rem;
+  justify-items: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 2rem;
+    align-items: center;
+    color: #fff;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, max-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(2, max-content);
+    }
+
+  }
+
+  img {
+    width: 5rem;
+    border-radius: 20rem;
+    display: block;
+  }
+
+  &__sold {
+    text-transform: uppercase;
+    margin-top: -3px;
+  }
 }
