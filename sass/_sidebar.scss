@@ -75,6 +75,11 @@ $transition-delay: 0.05s;
       transition: $transition-duration, opacity 0.1s;
       text-decoration: none;
 
+      &:hover {
+        border-bottom: solid 1px #fff;
+        font-size: 3rem;
+      }
+
 
       // Setting delays for the nav items in open transition
       @for $i from 1 through $items {
@@ -214,7 +219,7 @@ $transition-delay: 0.05s;
     top: 50%;
     left: 0;
     width: 2rem;
-    height: 3px;
+    height: 2px;
     background-color: #fff;
     transform: translateX(-50%) scaleY(-5);
     transition: $transition-duration;
