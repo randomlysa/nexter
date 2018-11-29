@@ -74,6 +74,8 @@ $transition-delay: 0.05s;
       opacity: 1;
       transform: scaleY(1);
       transition: $transition-duration, opacity 0.1s;
+      text-decoration: none;
+
 
       // Setting delays for the nav items in open transition
       @for $i from 1 through $items {
@@ -158,12 +160,12 @@ $transition-delay: 0.05s;
   float: left;
   clear: both;
   color: transparent;
+  font-family: $font-display;
   font-size: 2rem;
   letter-spacing: -6.2px;
   // Adjust the spacing between hamburger lines.
   height: 6px;
   line-height: 1px;
-  text-transform: uppercase;
   white-space: nowrap;
   transform: scaleY(0.2);
   transition: $transition-duration, opacity 1s;
