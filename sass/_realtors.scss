@@ -1,4 +1,4 @@
-@import "base";
+@import 'base';
 
 .realtors {
   background-color: $color-secondary;
@@ -29,7 +29,6 @@
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: repeat(2, max-content);
     }
-
   }
 
   img {

@@ -9,12 +9,10 @@
   }
 }
 
-
 // https://scotch.io/tutorials/building-a-morphing-hamburger-menu-with-css
 $items: 4;
 $transition-duration: 0.5s;
 $transition-delay: 0.05s;
-
 
 /* Toggle functionality */
 
@@ -26,9 +24,9 @@ $transition-delay: 0.05s;
 }
 
 #toggle:focus {
-
   & ~ .toggle-container .button-toggle {
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -38,10 +36,13 @@ $transition-delay: 0.05s;
 
   // Making the "X" icon using `:before` and `:after` pseudo-elements
   & ~ .toggle-container .button-toggle {
-    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
     &:before {
@@ -54,7 +55,9 @@ $transition-delay: 0.05s;
   }
 
   &:focus ~ .toggle-container .button-toggle {
-    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
   // Open nav
@@ -80,7 +83,6 @@ $transition-delay: 0.05s;
         font-size: 3rem;
       }
 
-
       // Setting delays for the nav items in open transition
       @for $i from 1 through $items {
         &:nth-child(#{$i}) {
@@ -100,7 +102,6 @@ $transition-delay: 0.05s;
   }
 }
 
-
 /* Toggle button */
 
 .button-toggle {
@@ -117,18 +118,20 @@ $transition-delay: 0.05s;
 
   @media only screen and (max-width: $bp-large) {
     margin-left: 2.5rem;
-    margin-top: .8rem;
+    margin-top: 0.8rem;
   }
 
   // Shadow on hover
   &:hover {
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 20px rgba(0, 0, 0, 0.1);
   }
 
   // Making the "X" icon using `:before` and `:after` pseudo-elements
   // Initially hidden because `scale(0)` transformation
 
-  &:before, &:after {
+  &:before,
+  &:after {
     position: absolute;
     content: '';
     top: 50%;
@@ -149,7 +152,6 @@ $transition-delay: 0.05s;
     transform: translateY(-50%) rotate(-45deg) scale(0);
   }
 }
-
 
 /* Menu */
 

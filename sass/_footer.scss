@@ -1,4 +1,4 @@
-@import "base";
+@import 'base';
 
 .footer {
   background-color: $color-secondary;
@@ -29,7 +29,7 @@
     text-decoration: none;
     text-align: center;
     display: block;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &__link:hover {
